@@ -1,0 +1,160 @@
+<html>
+<head>
+<title>DICE-M Admission Form</title>
+<!-- Added a basic, modern look using Tailwind CSS principles for better aesthetics -->
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="dice.css">
+
+<style> 
+
+select option{Background-color : lightgrey;color:black;}
+ 
+</style>
+</head>
+
+<body>
+
+
+
+  <div class="form-container">
+ 
+    
+
+     <h1 class="font-extrabold text-center py-3 bg-blue-600 text-white rounded-t-xl">
+    <img src="channels4_profile (1).png" height="70" width="70" align="left"> 
+    <span class="text-4xl">DICE-M ADMISSION FORM</span>
+    <br>
+    <span class="text-lg font-normal">Digital Institute of computer Education-Mission</span>
+</h1>
+	 
+	  
+    </h1>
+	
+
+    <!-- 
+      *** CRITICAL CHANGE HERE ***
+      1. ACTION must be the URL you get after deploying the Apps Script.
+      2. METHOD must be POST.
+    -->
+    <form action="https://script.google.com/macros/s/AKfycbwCY01iZxxeawFYARTxhWVu9QJjw2pC4nmGTCu4NDFGPw41umhTXhRGN-Cnnl6Es6cYuA/exec" method="POST" class="p-6">
+      <table class="form-table">
+        <!-- The Photo field is removed because file uploads are complex with Apps Script -->
+		
+        
+        <tr>
+          <td>First Name :</td>
+          <td><input type="text" name="FirstName" required></td>
+        </tr><tr>
+          <td>Last Name:</td>
+          <td><input type="text" name="LastName" required></td>
+        </tr>
+        <tr>
+          <td>Father's Name:</td>
+          <td><input type="text" name="Fname" required></td>
+        </tr>
+        <tr>
+          <td>Mother's Name:</td>
+          <td><input type="text" name="Mname" required></td>
+        </tr>
+        <tr>
+          <td>Date of Birth:</td>
+          <td><input type="date" name="Date" required></td>
+        </tr>
+        <tr>
+          <td>Email:</td>
+          <td><input type="email" name="Email" required></td>
+        </tr>
+        <tr>
+          <td>Mobile No:</td>
+          <td><input type="text" name="Mobile_No" pattern="\d{10}" title="10 digit phone number" required></td>
+        </tr>
+        <tr>
+          <td>Whatsapp No:</td>
+          <td><input type="text" name="Whatsapp_No" pattern="\d{10}" title="10 digit phone number"></td>
+        </tr>
+        <tr>
+          <td>Gender:</td>
+          <td>
+            <input type="radio" id="gender_m" name="gender" value="Male" required> 
+            <label for="gender_m" class="mr-4">Male</label>
+            <input type="radio" id="gender_f" name="gender" value="Female"> 
+            <label for="gender_f">Female</label>
+          </td>
+        </tr>
+        <tr>
+          <td>Religion:</td>
+          <td><input type="text" name="Religion" required></td>
+        </tr>
+        <tr>
+          <td>Medium:</td>
+          <td>
+            <input type="radio" id="medium_b" name="Medium" value="Bengali" required> 
+            <label for="medium_b" class="mr-4">Bengali</label>
+            <input type="radio" id="medium_e" name="Medium" value="English"> 
+            <label for="medium_e">English</label>
+          </td>
+        </tr>
+       <tr>
+            <td>Choose course</td>
+            <td>
+                <select name="course">
+				<optgroup label="1 year course">
+                    <option name=" ">ADCA</option>
+                    <option name=" ">PGDCA</option>
+					<optgroup label="6 month course">
+                    <option name=" ">DCA</option>
+                    <option name=" ">DTP</option>
+                    <option name=" ">DCA+</option>
+                    <optgroup label="Advance courses(6month)">
+					<option name=" ">Tally with GST</option>
+                  <option name=" ">Digital Marketing</option>
+                    <option name=" ">Graphic Desing</option>
+					<option name=" ">Web Devolopment</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Address:</td>
+          <td><textarea name="adress" rows="3" required></textarea></td>
+        </tr>
+        <tr>
+          <td>Pincode:</td>
+          <td><input type="text" name="Pincode" pattern="\d{6}" title="6 digit pincode" required></td>
+        </tr>
+		
+          <td>State:</td>
+          <td>
+            <select name="state" required>
+              <option value="">-- Select State --</option>
+              <option value="Meghalaya">Meghalaya</option>
+              <option value="Tripura">Tripura</option>
+              <option value="Assam">Assam</option> 
+			  <option value="West Bengal ">West Bengal </option>
+              <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+              <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+        <tr>
+          <td>Qualification:</td>
+          <td>
+            <select name="Qualification" required>
+              <option value="">-- Select Qualification --</option>
+              <option value="10th">10th</option>
+              <option value="12th">12th</option>
+              <option value="Graduate">Graduate</option>
+			  
+		
+            </select>
+          </td>
+        </tr>
+        <!-- Submit Button Row -->
+        <tr>
+          <td colspan="2" class="text-center pt-6">
+            <input type="submit" value="Submit Admission Form" class="submit-button">
+          </td>
+        </tr>
+      </table>
+	  
+    </form>
+  </div>
+  
+</body>
+</html>
